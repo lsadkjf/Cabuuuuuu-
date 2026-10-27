@@ -21,35 +21,39 @@
             <string>時間到了！</string>
             <key>FullScreen</key>
             <true/>
+            <key>Precomposed</key>
+            <true/>
         </dict>
+        
         <dict>
             <key>PayloadDisplayName</key>
-            <string>App使用時間限制</string>
+            <string>娛樂性防沉迷觸發器</string>
             <key>PayloadIdentifier</key>
-            <string>com.baker.applimit</string>
+            <string>com.baker.sessionlimit</string>
             <key>PayloadType</key>
-            <string>com.apple.applicationaccess</string>
+            <string>com.apple.autonomoussingleappmode</string>
             <key>PayloadUUID</key>
-            <string>9F8E7D6C-5B4A-3F2E-1D0C-9B8A7F6E5D4C</string>
+            <string>8E7D6C5B-4A3F-2E1D-0C9B-8A7F6E5D4C3B</string>
             <key>PayloadVersion</key>
             <integer>1</integer>
-            <!-- 限制 Instagram 和 Threads 的每日總時間為 900 秒（15分鐘） -->
-            <key>scheduledAppLimits</key>
+            <key>AllowedApplications</key>
             <array>
                 <dict>
-                    <key>apps</key>
-                    <array>
-                        <string>com.burbn.instagram</string>
-                        <string>com.instagram.threads</string>
-                    </array>
-                    <key>dailyLimitTime</key>
-                    <integer>900</integer>
+                    <key>BundleIdentifier</key>
+                    <string>com.burbn.instagram</string>
+                </dict>
+                <dict>
+                    <key>BundleIdentifier</key>
+                    <string>com.instagram.threads</string>
                 </dict>
             </array>
+            <!-- 設定單次對話最大閒置與存取鎖定為 900 秒（15分鐘） -->
+            <key>SessionTimeoutInSeconds</key>
+            <integer>900</integer>
         </dict>
     </array>
     <key>PayloadDisplayName</key>
-    <string>IG/Threads 15分鐘防沉迷跳轉外掛</string>
+    <string>IG/Threads 15分鐘防沉迷重複觸發外掛</string>
     <key>PayloadIdentifier</key>
     <string>com.baker.profile</string>
     <key>PayloadOrganization</key>
