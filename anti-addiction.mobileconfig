@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://apple.com">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <!-- 核心功能 1：將你的自訂網頁寫入系統全螢幕 Web Clip -->
+        <dict>
+            <key>PayloadDisplayName</key>
+            <string>麵包師傅在這ㄅㄥ</string>
+            <key>PayloadIdentifier</key>
+            <string>com.baker.webclip</string>
+            <key>PayloadType</key>
+            <string>com.apple.webClip.managed</string>
+            <key>PayloadUUID</key>
+            <string>A1B2C3D4-E5F6-7A8B-9C0D-1E2F3A4B5C6D</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>URL</key>
+            <!-- ⚠️ 請在這裡替換成你開啟 GitHub Pages 後的 index.html 網址 -->
+            <string>https://github.io</string>
+            <key>Label</key>
+            <string>時間到了！</string>
+            <key>FullScreen</key>
+            <true/>
+        </dict>
+        <!-- 核心功能 2：限制特定 App 使用時間，超時強制引導至該網頁 -->
+        <dict>
+            <key>PayloadDisplayName</key>
+            <string>App使用時間限制</string>
+            <key>PayloadIdentifier</key>
+            <string>com.baker.applimit</string>
+            <key>PayloadType</key>
+            <string>com.apple.applicationaccess</string>
+            <key>PayloadUUID</key>
+            <string>9F8E7D6C-5B4A-3F2E-1D0C-9B8A7F6E5D4C</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <!-- 限制 Instagram 和 Threads 的每日總時間為 900 秒（15分鐘） -->
+            <key>scheduledAppLimits</key>
+            <array>
+                <dict>
+                    <key>apps</key>
+                    <array>
+                        <string>com.burbn.instagram</string>
+                        <string>com.instagram.threads</string>
+                    </array>
+                    <key>dailyLimitTime</key>
+                    <integer>900</integer>
+                </dict>
+            </array>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>IG/Threads 15分鐘防沉迷跳轉外掛</string>
+    <key>PayloadIdentifier</key>
+    <string>com.baker.profile</string>
+    <key>PayloadOrganization</key>
+    <string>GitHub Open Source Project</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>E5D4C3B2-A1Z0-9Y8X-7W6V-5U4T3S2R1Q0P</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
